@@ -43,7 +43,7 @@
         $('.fullscreen-swiper-backdrop').fadeIn();
 
         $('.fullscreen-swiper').click(function (e) {
-            if(!e.target.classList.contains('img-holder_fullscreen')) {
+            if(e.target.tagName !== 'IMG') {
                 $(this).hide().empty().removeClass('fullscreen-swiper_open');
                 $('.fullscreen-swiper-backdrop').fadeOut();
             }
